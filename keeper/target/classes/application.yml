@@ -1,0 +1,13 @@
+server:
+  port: 12138
+
+# 设置环境变量 dev
+spring:
+  profiles:
+    active: dev
+# 设置postgres数据库的连接
+    datasource:
+        url: jdbc:postgresql://localhost:5432/mydatabase
+        username: myuser
+        password: secret
+        driver-class-name: org.postgresql.Driver
