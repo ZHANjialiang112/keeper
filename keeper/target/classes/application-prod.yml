@@ -1,0 +1,11 @@
+# Path: keeper\src\main\resources\application-dev.yml
+spring:
+  profiles:
+    active: dev
+  # 设置postgres数据库的连接,数据库连接池为HikariCP
+
+  datasource:
+    url: jdbc:postgresql://47.108.157.55:5432/keeper
+    username: postgres
+    password: zxcvb123
+    driver-class-name: org.postgresql.Driver

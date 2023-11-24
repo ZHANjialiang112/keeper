@@ -37,12 +37,12 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-docker-compose</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-docker-compose</artifactId>-->
+        <!--            <scope>runtime</scope>-->
+        <!--            <optional>true</optional>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -68,17 +68,29 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>4.4.0</version>
+        </dependency>
     </dependencies>
 
-<!--    <dependencyManagement>-->
-<!--        <dependencies>-->
-<!--            <dependency>-->
-<!--                <groupId>org.springframework.boot</groupId>-->
-<!--                <artifactId>spring-boot-starter-security</artifactId>-->
-<!--                <version>${spring-security.version}</version>-->
-<!--            </dependency>-->
-<!--        </dependencies>-->
-<!--    </dependencyManagement>-->
+    <!--    <dependencyManagement>-->
+    <!--        <dependencies>-->
+    <!--            <dependency>-->
+    <!--                <groupId>org.springframework.boot</groupId>-->
+    <!--                <artifactId>spring-boot-starter-security</artifactId>-->
+    <!--                <version>${spring-security.version}</version>-->
+    <!--            </dependency>-->
+    <!--        </dependencies>-->
+    <!--    </dependencyManagement>-->
 
     <build>
         <plugins>
@@ -100,10 +112,10 @@
                     </execution>
                 </executions>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.graalvm.buildtools</groupId>-->
-<!--                <artifactId>native-maven-plugin</artifactId>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.graalvm.buildtools</groupId>-->
+            <!--                <artifactId>native-maven-plugin</artifactId>-->
+            <!--            </plugin>-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
