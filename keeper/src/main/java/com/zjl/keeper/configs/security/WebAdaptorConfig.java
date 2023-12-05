@@ -56,7 +56,7 @@ public class WebAdaptorConfig {
 
     @Bean
     public AuthenticationProvider authenticationProvider() {
-        return null;
+        return new UserAuthenticationProvider();
     }
 
     @Bean

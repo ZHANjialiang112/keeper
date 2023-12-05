@@ -19,8 +19,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class EncryptService {
 
-    private final JwtProperty jwtProperty;
-
+    private final JwtProperties jwtProperty;
     public String createToken(User user) {
         Algorithm algorithm = Algorithm.HMAC256(jwtProperty.getSecret());
         // 使用User 生成对应的负载
