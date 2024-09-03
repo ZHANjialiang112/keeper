@@ -9,6 +9,15 @@ spring:
     database-change-log-table: liquibase_change_log
     database-change-log-lock-table: liquibase_change_log_lock
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health, beans, env, metrics
+  endpoint:
+    env:
+      show-values: never
+
 jwt:
   secret: 123456
   expiration: 21600000
