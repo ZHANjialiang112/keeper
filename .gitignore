@@ -1,18 +1,13 @@
-# 忽略项目根目录下的 target 目录
+ELP.md
 /target/
 
-# 允许 .mvn/wrapper/maven-wrapper.jar 文件
-!.mvn/wrapper/maven-wrapper.jar
+.mvn
+*/.mvn
 
-# 排除 src/main 和 src/test 目录下的 target 目录的忽略规则
-# 但忽略所有 target 目录下的 yml 文件
+!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-# 忽略所有 target 目录中的 .yml 文件
-**/target/**/*.yml
-
-# 忽略 IDE 和工具生成的文件和目录
 ### STS ###
 .apt_generated
 .classpath
@@ -40,7 +35,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-*.md
-
-/httpClient
