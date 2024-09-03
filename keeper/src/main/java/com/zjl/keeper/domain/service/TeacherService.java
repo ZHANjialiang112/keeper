@@ -2,6 +2,7 @@ package com.zjl.keeper.domain.service;
 
 import com.querydsl.core.group.GroupBy;
 import com.querydsl.core.types.Projections;
+import com.zjl.keeper.core.annotation.TestLog;
 import com.zjl.keeper.core.common.SearchService;
 import com.zjl.keeper.domain.entity.QSubject;
 import com.zjl.keeper.domain.entity.QTeacher;
@@ -33,5 +34,11 @@ public class TeacherService {
                 .from(teacher)
                 .leftJoin(subject).on(subject.teacher.eq(teacher)).fetchJoin()
                 .fetch());
+    }
+
+    @TestLog(tags = {"数组1","数组2"},value = "测试定义的注解")
+    public String haveLog(){
+        log.info("have log is over");
+        return "OK";
     }
 }

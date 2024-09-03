@@ -4,9 +4,11 @@ spring:
   profiles:
     active: dev
 
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+    database-change-log-table: liquibase_change_log
+    database-change-log-lock-table: liquibase_change_log_lock
 
 jwt:
   secret: 123456
   expiration: 21600000
-
-

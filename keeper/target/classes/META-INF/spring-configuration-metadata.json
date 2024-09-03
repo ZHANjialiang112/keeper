@@ -2,20 +2,20 @@
   "groups": [
     {
       "name": "jwt",
-      "type": "com.zjl.keeper.core.jwt.JwtProperty",
-      "sourceType": "com.zjl.keeper.core.jwt.JwtProperty"
+      "type": "com.zjl.keeper.core.jwt.JwtProperties",
+      "sourceType": "com.zjl.keeper.core.jwt.JwtProperties"
     }
   ],
   "properties": [
     {
       "name": "jwt.expiration",
       "type": "java.lang.Long",
-      "sourceType": "com.zjl.keeper.core.jwt.JwtProperty"
+      "sourceType": "com.zjl.keeper.core.jwt.JwtProperties"
     },
     {
       "name": "jwt.secret",
       "type": "java.lang.String",
-      "sourceType": "com.zjl.keeper.core.jwt.JwtProperty"
+      "sourceType": "com.zjl.keeper.core.jwt.JwtProperties"
     }
   ],
   "hints": []
