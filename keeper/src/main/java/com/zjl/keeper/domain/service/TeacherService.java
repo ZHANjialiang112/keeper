@@ -28,11 +28,11 @@ public class TeacherService {
         QSubject subject = QSubject.subject;
 
         return searchService.search(query ->
-                query.select(Projections.fields(TeacherModel.class,
-                        teacher.name,
-                        GroupBy.list(Projections.bean(SubjectModel.class,subject.name)).as("subjectModels")))
+                query.select(Projections.constructor(TeacherModel.class,
+                        teacher.name,subject.name))
                 .from(teacher)
                 .leftJoin(subject).on(subject.teacher.eq(teacher)).fetchJoin()
+                        .where(teacher.name.like("%王%"))
                 .fetch());
     }
 

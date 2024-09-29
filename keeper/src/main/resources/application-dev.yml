@@ -5,3 +5,17 @@ spring:
     url: jdbc:postgresql://47.108.157.55:5432/keeper
     username: postgres
     password: zxcvb123
+#  jpa:
+#    properties:
+#      hibernate:
+#        show_sql: true
+#        format_sql: true
+#        use_sql_comments: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        orm:
+          jdbc:
+            bind: TRACE

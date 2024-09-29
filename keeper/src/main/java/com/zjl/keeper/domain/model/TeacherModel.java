@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 public class TeacherModel {
     private String name;
-    private List<SubjectModel> subjectModels;
+    private String subjectName;
 
     public static TeacherModel from(Teacher teacher) {
         TeacherModel teacherModel = new TeacherModel();
@@ -25,7 +25,7 @@ public class TeacherModel {
             return teacherModel;
         }
         teacherModel.setName(teacher.getName());
-        teacherModel.setSubjectModels(teacher.getSubjects().stream().map(SubjectModel::from).collect(Collectors.toList()));
+//        teacherModel.setSubjectModels(teacher.getSubjects().stream().map(SubjectModel::from).collect(Collectors.toList()));
         return teacherModel;
     }
 }
