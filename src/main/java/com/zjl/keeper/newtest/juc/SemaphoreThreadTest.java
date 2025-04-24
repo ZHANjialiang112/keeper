@@ -6,7 +6,7 @@ import java.util.concurrent.Semaphore;
 
 /**
  * @author joey
- * @deprecated Semaphore 信号量测试
+ * @desc Semaphore 信号量测试
  */
 @Slf4j
 public class SemaphoreThreadTest {
